@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Portal peliculas</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+      </head>
+<body>
+    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+        <div class="container d-flex align-items-center justify-content-between"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <header id="header" class="fixed-top">
+      <div class="container d-flex">
+
+      <nav class="nav-menu d-none d-lg-block" style="margin-left:45%;">
+        <ul>
+          <li class="Menu active"><a href="/">Menu principal</a></li>
+         </ul>
+       </nav>
+      </div>
+     </header>
+     <br>
+     <br>
+    <div class="container">
+  
+  <div class="text-center container">
+      <h3>Lista de peliculas registradas</h3>
+    <small><span>Lista de peliculas almacenadas en la base e informacion</span></small>
+  </div>           
+  <table class="table table-bordered table-condensed text-center" id="tablaPeliculas">
+    <thead>
+      <tr>
+        <th><small>Nombre de pelicula</small></th>
+        <th><small>Sipnosis</small></th>
+        <th><small>Año de Estreno</small></th>
+      </tr>
+    </thead>
+    <tbody>
+        
+      
+    </tbody>
+  </table>
+</div>
+
+<script>
+
+  function mostrarPeliculas() {
+      fetch("http://localhost:4000/pelisAll")
+      .then((response)=>response.json())
+      .then((pelis)=>{
+          let tablapelis = document.querySelector('#tablaPeliculas tbody');
+
+          for (const itemtbl of pelis) {
+              let tr = "<tr> <td><small>" + itemtbl.nombrePeliula + "</small></td> <td><small>" + itemtbl.Sipnosis + "</small></td> <td><small>" + itemtbl.Anio + "</small></td></tr>";
+
+              tablapelis.innerHTML += tr; 
+              
+          }
+  })
+}
+
+mostrarPeliculas();
+
+
+</script>
+      
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Portal Peliculas</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <%= perfil%>
+            </div>
+            <div class="d-flex align-items-center">
+              <a href="/logout"> Cerrar Sesion</a>
+            </div>
+          </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <% if (login) {%>
+      <% if (perfil=='Administrador'){%>
+          <header id="header" class="fixed-top">
+              <div class="container d-flex">
+      
+              <nav class="nav-menu d-none d-lg-block" style="margin-left:25%;">
+                <ul>
+                  <li class="Menu active"><a href="#">Menu principal</a></li>
+                  <li><a href="/adminPeli">Administracion de Peliculas</a></li>
+                  <li><a href="/adminuser">Administracion de Usuarios</a></li>
+                 </ul>
+               </nav>
+              </div>
+             </header>
+             <%} else {%>
+          <header id="header" class="fixed-top">
+              <div class="container d-flex">
+      
+              <nav class="nav-menu d-none d-lg-block" style="margin-left:25%;">
+                <ul>
+                  <li class="Menu active"><a href="#">Menu principal</a></li>
+                  <li class="tienda"><a href="/adminPeli">Administracion de Peliculas</a></li>
+                 </ul>
+               </nav>
+              </div>
+             </header>
+             <%}%>
+  
+      <%} else {%>
+          <h1><%= perfil%></h1>
+      <% } %>
+
+            
+
+    <div>
+      <img src="img/catalogo.jpg" alt="" class="logprincipal img-fluid">
+    </div>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Login-Portal Peliculas</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+ 
+</head>
+
+<body>
+    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top" style="background:#0F0F23;">
+        <div class="container d-flex align-items-center justify-content-between"></div>
+    </div>
+    <main id="main">
+     <br>
+     <br>
+        <section id="pricing2" class="pricing2 text-center" >
+            <div class="col-lg-3 col-md-12" style="margin-left:35%;" >
+                <div class="box2 col-md-12">
+                 <h3>Inicio de sesion</h3>
+                    <div class="row">
+                        <img src="img/usuarios.png" alt="Card image cap" style="margin-left:30%;">
+                            <div class="card-body">
+                                <form action="/login" class="form-group col-md-12" method="POST" style="padding-top:5%;">
+                                    <div class="form-group">
+                                       <label for="usuario">Usuario</label>
+                                       <input type="text" class="form-control" id="user" name="user">
+                                       <small id="emailHelp" class="form-text text-muted">Esta informacion es confidencial.</small>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="exampleInputPassword1">Contraseña</label>
+                                      <input type="password" class="form-control" id="pass" name="pass">
+                                      <small id="emailHelp2" class="form-text text-muted">Esta informacion es confidencial.</small>
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <div class="alert alert-danger" role="alert" id="MensajeErrorVacio">
+                                           <strong>Advertencia!</strong>  Hay campos vacios
+                                        </div>
+                                        <div class="alert alert-danger" role="alert" id="MensajeUsuarioErrado">
+                                          <strong>Advertencia!</strong>  El usuario no existe
+                                        </div>
+                                    </div> -->
+                                    <div class="form-group form-check"></div>
+                                    <button type="submit" class="btn btn-primary btn-rect col-md-6">Ingresar</button>
+                                </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="copyright">
+           <strong><span>Portal Peliculas</span></strong>. All Rights Reserved
+        </div>
+        
+    </footer><!-- End Footer -->
+
+    <% if(alert) { %>
+      <script>
+        Swal.fire({
+          title:'<%= alertTitle %>',
+          text: '<%= alertMessage %>',
+          icon: '<%= alertIcon %>',
+          showConfirmButton: <%= showConfirmButton %>,
+          timer: <%= timer %>
+        }).then(()=>{
+           window.location='/<%= ruta %>'
+        })
+      </script>
+    <% } %>
+
+</body>
+
+</html>

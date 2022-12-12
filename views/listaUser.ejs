@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Inner Page - Medicio Bootstrap Template</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+        
+        
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+       
+      </head>
+<body>
+    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+        <div class="container d-flex align-items-center justify-content-between"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+   
+    
+
+    
+    
+
+    <header id="header" class="fixed-top">
+      <div class="container d-flex">
+
+      <nav class="nav-menu d-none d-lg-block" style="margin-left:45%;">
+        <ul>
+          <li class="Menu active"><a href="/">Menu principal</a></li>
+         </ul>
+       </nav>
+      </div>
+     </header>
+     <br>
+     <br>
+
+     
+
+     
+    <div class="container">
+
+      
+
+      <button type="button" class="btn btn-success btn-sm"><small>Agregar Usuario</small></button>
+  
+  <div class="text-center container">
+      <h3>Lista de usuarios registrados</h3>
+    <small><span>Lista de usuarios con los roles asignados</span></small>
+  </div>           
+  <table class="table table-bordered table-condensed table-sm text-center" id="tablaPersonal">
+    <thead>
+      <tr>
+        <th><small>Usuario</small></th>
+        <th><small>Clave</small></th>
+        <th><small>Perfil</small></th>
+        <th><small>Accion</small></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        
+      
+    </tbody>
+  </table>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/events.js"></script>
+
+
+<div class="container">
+  <h2>Modal Example</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<script>
+
+
+// $('#consusers').click(function(){
+  
+//    $.ajax({
+//      url: 'http://localhost:4000/usersAll',
+//      success: function(respuesta) {
+//       console.log(respuesta);
+//       let tablapersonal = document.querySelector('#tablaPersonal tbody'); 
+//       for (const itemtbl of respuesta) {
+//               let tr = "<tr> <td><small>" + itemtbl.user + "</small></td> <td><small>" + itemtbl.pass + "</small></td> <td><small>" + itemtbl.perfil + "</small></td> </tr>";
+//               tablapersonal.innerHTML += tr; 
+              
+//           }
+//       },
+//      error: function() {
+//           alert('No hubo conexion');
+//       }
+
+//    })
+
+// })
+
+
+
+
+</script>
+      
+</body>
+</html>
